@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { StrictMode } from "react";
-import TopBar from './topbar';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +24,7 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
         >
-          <div className="md:w-9/12 lg:w-8/12 mx-4 md:mx-auto md:border-l md:border-r border-white border-opacity-40 min-h-screen">
-            <TopBar />
             {children}
-          </div>
         </body>
       </html>
     </StrictMode>
